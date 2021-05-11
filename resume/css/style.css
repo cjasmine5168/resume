@@ -1,0 +1,487 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* setting */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(162, 169, 175, 1);
+    color: rgba(235, 237, 236, 1);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    background-color: rgba(199, 142, 127, 1);
+}
+
+.container {
+    width: 100%;
+    text-align: left;
+}
+
+.title {
+    padding: 15px;
+    width: 26%;
+    box-shadow: 5px 5px;
+}
+
+.title h1 {
+    color: rgba(61, 61, 59, 1);
+    font-family: 'cwTeXYen', sans-serif;
+    letter-spacing: 5px;
+    text-align: left;
+    padding: 10px 20px;
+    line-height: 35px;
+    background-color: rgba(162, 169, 175, 1);
+}
+
+/* header */
+header img {
+    margin: 5px 10px 0px;
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    background-color: rgba(76, 88, 112, 1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+#menu li {
+    list-style: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 30px;
+    padding: 10px 0px;
+}
+
+#menu a {
+    color: rgba(235, 237, 236, 1);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#menu a:hover {
+    color: rgba(199, 142, 127, 1);
+    text-decoration: underline;
+}
+
+
+/* main */
+section {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    padding: 60px;
+}
+
+#about {
+    background-color: rgba(235, 237, 236, 1);
+}
+
+.me {
+    padding: 60px 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.me p {
+    line-height: 250px;
+    font-family: 'cwTeXYen', sans-serif;
+    font-size: 1.7em;
+    letter-spacing: 5px;
+    background-image: url("/img/background4.png");
+    background-size: 350px 350px;
+}
+
+
+.jphoto {
+    width: 250px;
+    height: 250px;
+}
+
+.show {
+    padding: 60px 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-github {
+    color: rgba(76, 88, 112, 0.8);
+}
+
+
+#skills {
+    background-color: rgba(76, 88, 112, 0.8);
+}
+
+.c-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+}
+
+.row p {
+    width: 15%;
+    padding: 1em;
+    color: rgba(235, 237, 236, 1);
+    font-size: 1.5em;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+svg.radial-progress {
+    width: 15%;
+    padding: 1em;
+    transform: rotate(-90deg);
+}
+
+svg.radial-progress circle {
+    fill: rgba(0, 0, 0, 0);
+    stroke-dashoffset: 219.91148575129;
+    stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete {
+    opacity: 0.25;
+}
+
+svg.radial-progress circle.complete {
+    stroke-dasharray: 219.91148575129;
+}
+
+text {
+    fill: rgba(235, 237, 236, 1);
+    font-size: 1em;
+    text-anchor: middle;
+}
+
+svg.radial-progress circle {
+    stroke: rgba(199, 142, 127, 1);
+}
+
+#programming {
+    background-color: rgba(235, 237, 236, 1);
+    color: rgba(76, 88, 112, 1);
+}
+
+.p-container {
+    padding: 30px 60px 0px;
+}
+
+.all {
+    width: 100%;
+    display: flex;
+    padding: 30px 40px;
+    justify-content: space-between;
+}
+
+.pskillbar {
+    position: relative;
+    display: block;
+    width: 75%;
+    background: rgba(162, 169, 175, 0.5);
+    height: 60px;
+    border-radius: 3px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.pskillbar-title {
+    background-color: rgba(76, 88, 112, 1);
+    position: absolute;
+    width: 10%;
+    margin: 0;
+    font-size: 1em;
+    color: rgba(235, 237, 236, 1);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pskillbar-title span {
+    display: block;
+    padding: 0px 20px;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pskillbar-bar {
+    height: 60px;
+    width: 0px;
+    border-radius: 3px;
+    background-color: rgba(76, 88, 112, 0.5);
+}
+
+.pskill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 1em;
+    height: 60px;
+    line-height: 60px;
+    color: rgba(61, 61, 59, 1);
+}
+
+.all div i {
+    color: rgba(199, 142, 127, 1);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+}
+
+.all div i:hover {
+    color: rgba(199, 142, 127, 0.7);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+#experience {
+    background-color: rgba(76, 88, 112, 0.8);
+    padding: 0px;
+    /* background-image: ; */
+}
+
+.timeline {
+    position: relative;
+    width: 75%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgba(235, 237, 236, 1);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.t-container {
+    padding: 15px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.t-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: rgba(235, 237, 236, 1);
+    border: 4px solid rgba(199, 142, 127, 1);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(235, 237, 236, 1);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(235, 237, 236, 1);
+}
+
+.right::before {
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(235, 237, 236, 1);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(235, 237, 236, 1) transparent transparent;
+}
+
+.right::after {
+    left: -13px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: rgba(235, 237, 236, 1);
+    position: relative;
+    border-radius: 6px;
+    height: 22vh;
+}
+
+.content p {
+    text-align: left;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.content p,
+h2 {
+    font-family: 'cwTeXYen', sans-serif;
+}
+
+h2 {
+    font-size: 2em
+}
+
+.overlay {
+    position: absolute;
+    border-radius: 6px;
+    left: 0px;
+    top: 0px;
+    height: 47vh;
+    width: 100%;
+    transition: .2s ease;
+    opacity: 0;
+    box-shadow: 4px 4px 10px rgba(61, 61, 59, 1);
+}
+
+.under-overlay {
+    position: absolute;
+    border-radius: 6px;
+    left: 0px;
+    bottom: 0px;
+    height: 47vh;
+    width: 100%;
+    transition: .2s ease;
+    opacity: 0;
+    box-shadow: 4px 4px 10px rgba(61, 61, 59, 1);
+}
+
+.content:hover .overlay {
+    opacity: 1;
+}
+
+.content:hover .under-overlay {
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .t-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .t-container::before {
+        left: 60px;
+        border: medium solid rgba(235, 237, 236, 1);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(235, 237, 236, 1) transparent transparent;
+    }
+
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+#contests {
+    background-color: rgba(235, 237, 236, 1);
+    color: rgba(76, 88, 112, 1);
+    /* padding: 200px 0px 0px; */
+}
+
+/* footer */
+footer {
+    background-color: rgba(76, 88, 112, 1);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+    color: rgba(235, 237, 236, 1);
+}
+
+footer a {
+    color: rgba(235, 237, 236, 1);
+    text-decoration: none
+}
+
+footer a:hover {
+    color: rgba(199, 142, 127, 1);
+}
+
+footer li {
+    list-style: none;
+    padding: 5px 30px;
+    font-size: 1.5em;
+    color: rgba(235, 237, 236, 1);
+}
+
+footer div {
+    width: 25%;
+}
+
+footer span {
+    padding: 0px 20px;
+}
+
+.icon {
+    text-align: left;
+}
