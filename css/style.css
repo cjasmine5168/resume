@@ -171,7 +171,7 @@ section {
     font-family: 'cwTeXYen', sans-serif;
     font-size: 2em;
     letter-spacing: 5px;
-    background-image: url("img/background.png");
+    background-image: url("../img/background.png");
     background-size: 350px 350px;
 }
 
